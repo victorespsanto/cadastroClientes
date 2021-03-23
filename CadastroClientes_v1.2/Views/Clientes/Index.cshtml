@@ -22,12 +22,15 @@
             @Html.DisplayNameFor(model => model.cpf)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.matricula)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.idade)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.profissao)
         </th>
-        
+
         <th></th>
     </tr>
 
@@ -35,32 +38,35 @@
 
     item.idade = 2021 - item.dataNascimento.Year;
 
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.sobrenome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dataNascimento).ToString()
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cpf)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.idade)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.profissao)
-        </td>
-        
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.matricula }) |
-            @Html.ActionLink("Detalhes", "Details", new { id=item.matricula }) |
-            @Html.ActionLink("Apagar", "Delete", new { id=item.matricula })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.nome)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.sobrenome)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.dataNascimento).ToString()
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.cpf)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.matricula)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.idade)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.profissao)
+    </td>
+
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.matricula }) |
+        @Html.ActionLink("Detalhes", "Details", new { id = item.matricula }) |
+        @Html.ActionLink("Apagar", "Delete", new { id = item.matricula })
+    </td>
+</tr>
 }
 
 
