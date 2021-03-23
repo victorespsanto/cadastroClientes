@@ -15,7 +15,7 @@ namespace CadastroClientes_v1._2.Models
 
     public partial class Clientes
     {
-        [Display(Name = "Nome:")]
+        [Display(Name = "Nome")]
         public string nome { get; set; }
 
         [Display(Name = "Sobrenome")]
