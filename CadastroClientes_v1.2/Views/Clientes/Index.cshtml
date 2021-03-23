@@ -36,7 +36,7 @@
 
 @foreach (var item in Model) {
 
-    item.idade = 2021 - item.dataNascimento.Year;
+    item.idade = DateTime.Now.Year - item.dataNascimento.Year;
 
 <tr>
     <td>
