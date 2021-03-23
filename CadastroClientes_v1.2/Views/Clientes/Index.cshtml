@@ -1,0 +1,68 @@
+﻿@model IEnumerable<CadastroClientes_v1._2.Models.Clientes>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Clientes</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sobrenome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataNascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cpf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.profissao)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+
+    item.idade = 2021 - item.dataNascimento.Year;
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sobrenome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataNascimento).ToString()
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cpf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.profissao)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.matricula }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.matricula }) |
+            @Html.ActionLink("Apagar", "Delete", new { id=item.matricula })
+        </td>
+    </tr>
+}
+
+
+
+</table>

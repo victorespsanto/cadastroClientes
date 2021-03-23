@@ -1,0 +1,76 @@
+﻿@model CadastroClientes_v1._2.Models.Clientes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes do Cadastro</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sobrenome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sobrenome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model =>model.dataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idade)
+        </dt>
+
+        <dd>
+            @(2021 - Model.dataNascimento.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.profissao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.profissao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.senha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.senha)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Alterar", "Edit", new { id = Model.matricula }) |
+    @Html.ActionLink("Retornar à Lista", "Index")
+</p>
+
+
