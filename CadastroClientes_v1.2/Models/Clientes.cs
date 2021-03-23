@@ -38,6 +38,7 @@ namespace CadastroClientes_v1._2.Models
         public string profissao { get; set; }
 
         [Display(Name = "Senha")]
+        [DataType(DataType.Password)]
         public string senha { get; set; }
     }
 }
